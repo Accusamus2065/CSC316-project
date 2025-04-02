@@ -1,0 +1,184 @@
+/* Base styles */
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Scroll Container */
+.scroll-container {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+/* Page Layout */
+.page {
+    /* Change from min-height to fixed height for consistent scrolling */
+    height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Custom Backgrounds by Page */
+#page1 {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+#page2 {
+    background: linear-gradient(135deg, #bdc3c7 0%, #2c3e50 100%);
+}
+
+#page3 {
+    background: linear-gradient(135deg, #fefcea 0%, #f1da36 100%);
+}
+
+#page4 {
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+/* Page Title */
+.page-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Story Text Container */
+.story-container {
+    margin-bottom: 30px;
+    max-width: 800px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* Visualization Container */
+.visualization-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Visualization Columns */
+.visualization-col {
+    background: #ffffff;
+    border: 2px solid #ddd;
+    padding: 20px;
+}
+
+/* Dot navigation */
+.dots-container {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #bdc3c7;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dot.active {
+    background: #16a085;
+}
+
+/* Button Styling */
+.btn {
+    background: #16a085;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #138d75;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .visualization-col {
+        max-width: 100%;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+}
+
+.no-border {
+    border: none !important;
+    background: none !important;
+    padding: 0 !important;
+}
+
+/* Side title container to center the rotated title */
+.side-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Rotate the title vertically */
+.side-title {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    white-space: nowrap;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+/* Hide Scrollbar for Webkit Browsers */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.vis-title {
+    margin-bottom: 1rem;
+}
+
+.vis-placeholder {
+    width: 600px;
+    min-height: 30vh;
+    height: auto;
+    border: 2px dashed grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Hide Scrollbar for Firefox */
+
+    .scroll-container {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+    }
+}
+
+#vis3 {
+    position: relative;
+    width: calc(100% - 40px); /* Reserve space for dots */
+}
